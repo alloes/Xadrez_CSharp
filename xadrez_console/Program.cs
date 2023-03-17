@@ -1,4 +1,6 @@
-﻿using Tabuleiro;
+﻿using System;
+using tabuleiro;
+using xadrez;
 
 namespace xadrez_console
 {
@@ -6,7 +8,9 @@ namespace xadrez_console
     {
         static void Main(string[] args)
         {
-            Tabuleiro.Tabuleiro tabuleiro = new Tabuleiro.Tabuleiro(8, 8);
+            Tabuleiro tabuleiro = new Tabuleiro(8, 8);
+
+            tabuleiro.putPeca(new Rei(tabuleiro, Cor.Preta), new Posicao(2, 7));
 
             Tela.imprimirTabuleiro(tabuleiro);
 

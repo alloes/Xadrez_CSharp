@@ -1,23 +1,23 @@
 ﻿using System;
-using Tabuleiro;
+using tabuleiro;
 
 namespace xadrez_console
 {
     class Tela
     {
-        public static void imprimirTabuleiro(Tabuleiro.Tabuleiro tabuleiro)
+        public static void imprimirTabuleiro(Tabuleiro tabuleiro)
         {
             for (int i = 0; i < tabuleiro.linhas; i++)
             {
                 for (int j = 0; j < tabuleiro.colunas; j++)
                 {
-                    if (tabuleiro.GetPeca(i, j) == null)
+                    if (tabuleiro.getPeca(i, j) == null)
                     {
                         Console.Write("- ");
                     }
                     else
                     {
-                        Console.Write(tabuleiro.GetPeca(i, j) + " ");
+                        Console.Write(tabuleiro.getPeca(i, j) + " ");
                     }
                 }
                 Console.WriteLine();
