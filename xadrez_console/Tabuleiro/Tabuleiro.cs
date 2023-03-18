@@ -24,6 +24,10 @@
 
         public void ColocarPeca(Peca peca, Posicao posicao)
         {
+            if (ExistePeca(posicao))
+            {
+                throw new TabuleiroException("Esta posição esta ocupada!");
+            }
             pecas[posicao.linha, posicao.coluna] = peca;
             peca.posicao = posicao;
         }
