@@ -10,7 +10,7 @@ namespace xadrez_console
         {
             Tabuleiro tabuleiro = new Tabuleiro(8, 8);
 
-            tabuleiro.putPeca(new Rei(tabuleiro, Cor.Preta), new Posicao(2, 7));
+            tabuleiro.ColocarPeca(new Rei(tabuleiro, Cor.Preta), new Posicao(2, 8));
 
             Tela.imprimirTabuleiro(tabuleiro);
 
