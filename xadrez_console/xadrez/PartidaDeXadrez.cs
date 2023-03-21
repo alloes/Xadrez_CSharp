@@ -31,6 +31,7 @@ namespace xadrez
         private void ColocarPecas()
         {
             tabuleiro.ColocarPeca(new Torre(tabuleiro, Cor.Preta), new PosicaoXadrez('c', 1).toPosicao());
+            tabuleiro.ColocarPeca(new Rei(tabuleiro, Cor.Preta), new PosicaoXadrez('c', 8).toPosicao());
         }
     }
 }
