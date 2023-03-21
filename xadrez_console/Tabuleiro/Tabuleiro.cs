@@ -32,6 +32,17 @@
             peca.posicao = posicao;
         }
 
+        public Peca RetirarPeca(Posicao posicao)
+        {
+            if (Peca(posicao) == null)
+            {
+                return null;
+            }
+            Peca aux = Peca(posicao);
+            aux.posicao = null;
+            pecas[posicao.linha, posicao.coluna] = null;
+            return aux;
+        }
         public bool ExistePeca(Posicao posicao)
         {
             ValidarPosicao(posicao);
