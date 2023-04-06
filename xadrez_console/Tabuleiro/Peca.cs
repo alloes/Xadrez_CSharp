@@ -19,6 +19,21 @@
             qteMovimentos++;
         }
 
+        public  bool existeMovimentosPossiveis()
+        {
+            bool[,] mat = MovimentosPossiveis();
+            for (int i = 0; i < tabuleiro.linhas; i++)
+            {
+                for (int j = 0; j < tabuleiro.colunas; j++)
+                {
+                    if (mat[i, j])
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
         public abstract bool[,] MovimentosPossiveis();
     }
 }
