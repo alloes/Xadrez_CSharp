@@ -34,6 +34,11 @@
             }
             return false;
         }
+
+        public bool podeMoverPara(Posicao posicao)
+        {
+            return MovimentosPossiveis()[posicao.linha, posicao.coluna];
+        }
         public abstract bool[,] MovimentosPossiveis();
     }
 }

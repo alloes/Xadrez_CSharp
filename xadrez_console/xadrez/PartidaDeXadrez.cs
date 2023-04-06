@@ -62,6 +62,14 @@ namespace xadrez
             }
         }
 
+        public void validarPosicaoDeDestino(Posicao origem, Posicao destino)
+        {
+            if (!tabuleiro.Peca(origem).podeMoverPara(destino))
+            {
+                throw new TabuleiroException("Posição de distino inválida!");
+            }
+        }
+
         private void ColocarPecas()
         {
             tabuleiro.ColocarPeca(new Torre(tabuleiro, Cor.Branca), new PosicaoXadrez('c', 1).toPosicao());
